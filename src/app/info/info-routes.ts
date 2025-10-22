@@ -13,13 +13,19 @@ import { ThemedEndUserAgreementComponent } from './end-user-agreement/themed-end
 import { ThemedFeedbackComponent } from './feedback/themed-feedback.component';
 import {
   ACCESSIBILITY_SETTINGS_PATH,
+  AWARD_PATH,
   COAR_NOTIFY_SUPPORT,
   END_USER_AGREEMENT_PATH,
   FEEDBACK_PATH,
+  POLICIES_PATH,
   PRIVACY_PATH,
+  REQUIREMENTS_PATH,
 } from './info-routing-paths';
 import { NotifyInfoComponent } from './notify-info/notify-info.component';
 import { ThemedPrivacyComponent } from './privacy/themed-privacy.component';
+import { PoliciesComponent } from './policies/policies.component';
+import { RequirementsComponent } from './requirements/requirements.component';
+import { AwardComponent } from './award/award.component';
 
 
 export const ROUTES: Routes = [
@@ -35,6 +41,24 @@ export const ROUTES: Routes = [
     component: AccessibilitySettingsComponent,
     resolve: { breadcrumb: i18nBreadcrumbResolver },
     data: { title: 'info.accessibility-settings.title', breadcrumbKey: 'info.accessibility-settings' },
+  },
+  {
+    path: POLICIES_PATH,
+    component: PoliciesComponent,
+    resolve: { breadcrumb: i18nBreadcrumbResolver },
+    data: { title: 'Políticas del Repositorio', breadcrumbKey: 'info.policies' },
+  },
+  {
+    path: REQUIREMENTS_PATH,
+    component: RequirementsComponent,
+    resolve: { breadcrumb: i18nBreadcrumbResolver },
+    data: { title: 'Requisitos para Publicación', breadcrumbKey: 'info.requirements' },
+  },
+  {
+    path: AWARD_PATH,
+    component: AwardComponent,
+    resolve: { breadcrumb: i18nBreadcrumbResolver },
+    data: { title: 'Premio Anual Osvaldo García de la Concha', breadcrumbKey: 'info.award' },
   },
   environment.info.enableEndUserAgreement ? {
     path: END_USER_AGREEMENT_PATH,
@@ -61,3 +85,4 @@ export const ROUTES: Routes = [
     },
   } : undefined,
 ].filter((route: Route) => hasValue(route));
+

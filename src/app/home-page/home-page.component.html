@@ -1,4 +1,3 @@
-<ds-home-coar></ds-home-coar>
 <ds-home-news></ds-home-news>
 @if (showDiscoverFilters) {
   <ds-configuration-search-page
@@ -18,6 +17,9 @@
 <ds-suggestions-popup></ds-suggestions-popup>
 
 <ng-template #homeContent>
+  <div class="home-libro" role="img" aria-label="Imagen de libro">
+    <img src="assets/images/libro.png" alt="Libro" />
+  </div>
   <ds-search-form [inPlaceSearch]="false"
     [searchPlaceholder]="'home.search-form.placeholder' | translate">
   </ds-search-form>

@@ -1,3 +1,18 @@
+
+/* Imagen destacada en Home */
+.home-libro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0 2rem;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    max-height: 320px;
+    display: block;
+  }
+}
 @include media-breakpoint-down(md) {
   ds-themed-configuration-search-page + .container {
     width: 100%;

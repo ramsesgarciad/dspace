@@ -6,11 +6,38 @@
       [attr.aria-label]="(isMobile$ | async) ? ('nav.main.description' | translate) : null"
          class="h-100 flex-fill d-flex flex-row flex-nowrap justify-content-start align-items-center gapx-3 flex-grow-1">
       <a class="d-block my-2 my-md-0" routerLink="/home" [attr.aria-label]="'home.title' | translate" role="button" tabindex="0">
-        <img id="header-logo" src="assets/images/dspace-logo.svg" [attr.alt]="'menu.header.image.logo' | translate"/>
+        <img id="header-logo" src="assets/images/iateci-logo.png" [attr.alt]="'menu.header.image.logo' | translate"/>
       </a>
       @if ((isMobile$ | async) !== true) {
         <nav class="navbar navbar-expand p-0 align-items-stretch align-self-stretch flex-grow-1 flex-shrink-1" id="desktop-navbar" [attr.aria-label]="'nav.main.description' | translate">
-          <ds-navbar></ds-navbar>
+          <div class="navbar-nav align-items-md-center me-auto shadow-none gapx-3" role="menubar">
+            <!-- Enlaces IATECI -->
+            <div class="ds-menu-item-wrapper text-md-center">
+              <a routerLink="/home" class="nav-link" role="menuitem">
+                <span class="navbar-link-text">Inicio</span>
+              </a>
+            </div>
+            <div class="ds-menu-item-wrapper text-md-center">
+              <a routerLink="/community-list" class="nav-link" role="menuitem">
+                <span class="navbar-link-text">Categorías</span>
+              </a>
+            </div>
+            <div class="ds-menu-item-wrapper text-md-center">
+              <a routerLink="/info/policies" class="nav-link" role="menuitem">
+                <span class="navbar-link-text">Políticas</span>
+              </a>
+            </div>
+            <div class="ds-menu-item-wrapper text-md-center">
+              <a routerLink="/info/requirements" class="nav-link" role="menuitem">
+                <span class="navbar-link-text">Requisitos</span>
+              </a>
+            </div>
+            <div class="ds-menu-item-wrapper text-md-center">
+              <a routerLink="/info/award" class="nav-link" role="menuitem">
+                <span class="navbar-link-text">Premio Anual</span>
+              </a>
+            </div>
+          </div>
         </nav>
       }
     </div>
@@ -35,3 +62,4 @@
     </div>
   </div>
 </header>
+

@@ -44,15 +44,15 @@ $font-family-sans-serif: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI"
 //$teal:    #20c997 !default;
 //$cyan:    #17a2b8 !default;
 
-// Override semantic colors here
-$primary:   #43515f;  // Gray
-$secondary: #495057;  // As Bootstrap $gray-700
-$success:   #92c642;  // Lime
-$info:      #1e6f90;  // Light blue
+// Override semantic colors here - IATECI Brand Colors
+$primary:   #045484;  // IATECI Blue
+$secondary: #539385;  // IATECI Teal
+$success:   #3c9c44;  // IATECI Green
+$info:      #3c7c9c;  // IATECI Light Blue
 $warning:   #ec9433;  // Orange
 $danger:    #cf4444;  // Red
-$light:     #f8f9fa;  // As Bootstrap $gray-100
-$dark:      #43515f;  // Dark blue
+$light:     #d9e4e4;  // IATECI Light Gray
+$dark:      #045484;  // IATECI Dark Blue
 
 // Add new semantic colors here (you don't need to add existing semantic colors)
 $theme-custom-semantic-colors: (
@@ -64,21 +64,21 @@ $min-contrast-ratio: 2.06 !default;
 
 $body-color: #343a40;       // As Bootstrap $gray-800
 
-$link-color: #1e6f90;       // Blue green, as DSpace $info
+$link-color: #045484;       // IATECI Blue
 $link-decoration: none;
-$link-hover-color: darken($link-color, 15%);
+$link-hover-color: #3c7c9c; // IATECI Light Blue
 $link-hover-decoration: underline;
 
-$table-accent-bg: #f8f9fa;  // As Bootstrap $gray-100
-$table-hover-bg: #ced4da;   // As Bootstrap $gray-400
+$table-accent-bg: #d9e4e4;  // IATECI Light Gray
+$table-hover-bg: #76a4bc;   // IATECI Blue hover
 
 $navbar-dark-color: #fff;
 
 
-/*** CUSTOM DSPACE VARIABLES ***/
+/*** CUSTOM DSPACE VARIABLES - IATECI ***/
 
-$ds-home-news-link-color: #D2FC93;
-$ds-header-navbar-border-bottom-color: #92c642;
+$ds-home-news-link-color: #67b36d;  // IATECI Green
+$ds-header-navbar-border-bottom-color: #3c9c44;  // IATECI Green
 
-$ds-breadcrumb-link-color: #154E66 !default;
-$ds-breadcrumb-link-active-color: #040D11 !default;
+$ds-breadcrumb-link-color: #045484 !default;  // IATECI Blue
+$ds-breadcrumb-link-active-color: #3c7c9c !default;  // IATECI Light Blue

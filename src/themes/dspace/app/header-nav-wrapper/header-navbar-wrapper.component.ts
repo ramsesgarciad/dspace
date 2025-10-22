@@ -1,5 +1,6 @@
 import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { ThemedHeaderComponent } from '../../../../app/header/themed-header.component';
@@ -17,6 +18,7 @@ import { slideMobileNav } from '../../../../app/shared/animations/slide';
   standalone: true,
   imports: [
     AsyncPipe,
+    RouterLink,
     ThemedHeaderComponent,
     ThemedNavbarComponent,
     TranslateModule,
